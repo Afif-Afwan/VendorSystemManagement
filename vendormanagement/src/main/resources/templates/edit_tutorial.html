@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VSM</title>
+
+    <link href="css/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="min-h-screen h-full flex flex-col">
+        <nav class="flex items-center justify-between flex-wrap bg-gray-700 p-6">
+            <div class="flex items-center flex-shrink-0 text-white mr-6">
+                <a href="/" class="font-semibold text-xl tracking-tight">VSM</a>
+            </div>
+            <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+                <div class="text-sm lg:flex-grow">
+                    <a href="/" class="block mt-4 lg:inline-block lg:mt-0 text-gray-300 hover:underline mr-4">
+                        Vendors
+                    </a>
+                    <a href="/departments" class="block mt-4 lg:inline-block lg:mt-0 text-gray-300 hover:underline mr-4">
+                        Payment History
+                    </a>
+                </div>
+            </div>
+        </nav>
+        <div class="flex justify-center mt-3">
+            <div class="w-full max-w-lg md:max-w-6xl">
+                <div class="w-full my-2 border-b border-black">
+                    <div class="flex justify-between">
+                        <span class="text-4xl">Vendors Management</span>
+                        <a href="#responsive-header" class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 border border-gray-700 rounded">
+                            Back
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flex justify-center mt-3">
+            <div class="w-full max-w-lg md:max-w-6xl border-b border-black">
+                <div class="w-full my-2">
+                    <div class="flex justify-between">
+                        <span class="text-2xl">Add employee</span>
+                    </div>
+                </div>
+                <form class="w-full mt-4" action="" method="POST">                 
+                    <div class="mb-4">
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="vendor">
+                            Vendor
+                        </label>
+                        <select class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name="vendor" id="vendor">
+                            <option value="">1002-Dayang binti Haji Abdullah (00-654321)</option>
+                        </select>
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="from">
+                            From
+                        </label>
+                        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name="from" id="from" type="date" placeholder="Choose From">
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="to">
+                            To
+                        </label>
+                        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name="to" id="to" type="date" placeholder="Choose Start Date">
+                    </div>
+                    <div class="mb-4">
+                        <button class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 border border-gray-700 rounded">Add vendor</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="flex justify-center mt-3">
+            <div class="w-full max-w-lg md:max-w-6xl border-b border-black pb-6">
+                <div class="w-full my-2">
+                    <div class="flex justify-between">
+                        <span class="text-2xl">Vendor List</span>
+                    </div>
+                </div>
+                <div class="w-full">
+                    <table class="w-full text-left">
+                        <thead class="border border-black bg-gray-300">
+                            <th class="w-1/12 px-2 py-2">ID</th>
+                            <th class="w-3/12 px-2 py-2">Name</th>
+                            <th class="w-3/12 px-2 py-2">Brunei IC Number</th>
+                            <th class="w-2/12 px-2 py-2">From</th>
+                            <th class="w-2/12 px-2 py-2">To</th>
+                            <th class="w-1/12 px-2 py-2">Action</th>
+                        </thead>
+                        <tbody class="bg-gray-100">
+                            <tr class="border-b border-gray-300 hover:bg-white">
+                                <th class="px-2 py-2">1001</th>
+                                <th class="px-2 py-2">Abdul bin Mohammad</th>
+                                <th class="px-2 py-2">00-123456</th>
+                                <th class="px-2 py-2">2010-01-19</th>
+                                <th class="px-2 py-2">NULL</th>
+                                <th class="flex justify-between px-2 py-2">
+                                    <a href="#responsive-header" class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 border border-gray-700 rounded mr-3">
+                                        Edit
+                                    </a>
+                                    <a href="#responsive-header" class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 border border-gray-700 rounded">
+                                        Delete
+                                    </a>
+                                </th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="flex justify-center mt-3">
+            <div class="w-full max-w-lg border-b border-black">
+                <div class="w-full my-2">
+                    <div class="flex justify-between">
+                        <span class="text-2xl">Edit Group</span>
+                    </div>
+                </div>
+                <div class="w-full">
+                    <form class="w-full mt-4" action="" method="POST">
+                        <div class="mb-4">
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="group-code">
+                                Group Code
+                            </label>
+                            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name="group-code" id="group-code" type="text" placeholder="Enter group code">
+                        </div>                        
+                        <div class="mb-4">
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="programme">
+                                Programme
+                            </label>
+                            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name="programme" id="programme" type="text" placeholder="Enter programme name">
+                        </div>
+                        <div class="mb-4">
+                            <button class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 border border-gray-700 rounded">Edit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

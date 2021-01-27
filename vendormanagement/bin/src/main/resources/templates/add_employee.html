@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Network Programming</title>
+
+    <link href="css/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="min-h-screen h-full flex flex-col">
+        <nav class="flex items-center justify-between flex-wrap bg-gray-700 p-6">
+            <div class="flex items-center flex-shrink-0 text-white mr-6">
+                <a href="/" class="font-semibold text-xl tracking-tight">NEP</a>
+            </div>
+            <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+                <div class="text-sm lg:flex-grow">
+                    <a href="/" class="block mt-4 lg:inline-block lg:mt-0 text-gray-300 hover:underline mr-4">
+                        Employees
+                    </a>
+                    <a href="/departments" class="block mt-4 lg:inline-block lg:mt-0 text-gray-300 hover:underline mr-4">
+                        Departments
+                    </a>
+                </div>
+            </div>
+        </nav>
+        <div class="flex justify-center mt-3">
+            <div class="w-full max-w-lg">
+                <div class="w-full my-2">
+                    <div class="flex justify-between">
+                        <span class="text-2xl">Add New Employee</span>
+                        <a href="#responsive-header" class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 border border-gray-700 rounded">
+                            Back
+                        </a>
+                    </div>
+                </div>
+                <div class="w-full">
+                    <form action="/addemployee/add" method="POST">
+                        <div class="mb-4">
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="employee-id">
+                                Employee ID
+                            </label>
+                            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name="employee_id" id="employee-id" type="text" placeholder="Enter employee id">
+                        </div>                        
+                        <div class="mb-4">
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="full-name">
+                                Full Name
+                            </label>
+                            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name="full_name" id="full-name" type="text" placeholder="Enter full name">
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="ic-number">
+                                Brunei IC Number
+                            </label>
+                            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name="ic_number" id="ic-number" type="text" placeholder="Enter Brunei IC number">
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="start-date">
+                                Start Date
+                            </label>
+                            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name="start_date" id="start-date" type="date" placeholder="Choose Start Date">
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="salary">
+                                Salary
+                            </label>
+                            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name="salary" id="salary" type="text" placeholder="Enter salary">
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="address">
+                                Address
+                            </label>
+                            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name="address" id="address" type="text" placeholder="Enter address">
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="post-code">
+                                Post Code
+                            </label>
+                            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name="post_code" id="post-code" type="text" placeholder="Enter post-code">
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="country">
+                                Country
+                            </label>
+                            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name="country" id="country" type="text" placeholder="Enter country">
+                        </div>
+                        <div class="mb-4">
+                            <button type="submit" class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 border border-gray-700 rounded">Add</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
