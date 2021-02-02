@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns:th="http://thymeleaf.org">
+
+<head>
+
+    <meta charset="UTF-8">
+    
+    <title>VSM</title>
+
+    <link href="/css/tailwind.min.css" rel="stylesheet">
+    
+</head>
+
+<body>
+    <div class="min-h-screen h-full flex flex-col">
+    
+        <nav class="flex items-center justify-between flex-wrap bg-gray-700 p-6">
+        
+            <div class="flex items-center flex-shrink-0 text-white mr-6">
+            
+                <a href="/" class="font-semibold text-xl tracking-tight">VSM</a>
+                
+            </div>
+            
+            <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+            
+                <div class="text-sm lg:flex-grow">
+                
+                    <a href="/addvendor" class="block mt-4 lg:inline-block lg:mt-0 text-gray-300 hover:underline mr-4">
+                        Add Vendors
+                    </a>
+                    
+                    <a href="/tutorials" class="block mt-4 lg:inline-block lg:mt-0 text-gray-300 hover:underline mr-4">
+                        Payment History
+                    </a>
+                    
+                </div>
+                
+            </div>
+            
+        </nav>
+        
+        <div class="flex justify-center mt-3">
+        
+            <div class="w-full max-w-lg border-b border-black">
+            
+                <div class="w-full my-2">
+                
+                    <div class="flex justify-between">
+                    
+                        <span class="text-2xl">
+                        Confirm Delete Profile?
+                        </span>
+                        
+                    </div>
+                    
+                </div>
+                
+                <div class="w-full flex justify-center mt-3 ">
+                
+                	<a href="/" class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 m-10 border border-gray-700 rounded">
+                            No
+                    </a>
+                        
+               	   	<a href="'/deletevendor/' + ${ vendor.id } + '/deleteconfirmed'" class="bg-gray-500 hover:bg-gray-700 
+                        text-white font-bold py-2 px-4 m-10 border border-gray-700 rounded">
+                            Yes
+                    </a>
+                    
+                </div>
+                
+            </div>
+            
+        </div>
+        
+    </div>
+    
+</body>
+
+</html>
